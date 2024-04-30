@@ -9,9 +9,12 @@ import Cart from './Pages/Cart';
 import LoginSignup from './Pages/LoginSignup';
 import Product from './Pages/Product';
 import Footer from './Components/Footer/Footer';
-import men_banner from './Components/Assets/banner_mens.png'
-import women_banner from './Components/Assets/banner_women.png'
-import kid_banner from './Components/Assets/banner_kids.png'
+import one from './Components/Assets/1.png';
+import two from './Components/Assets/2.png';
+import three from './Components/Assets/3.png';
+import four from './Components/Assets/4.png';
+// import women_banner from './Components/Assets/banner_women.png'
+// import kid_banner from './Components/Assets/banner_kids.png'
 function App() {
   return (
     <div>
@@ -19,9 +22,11 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Shop/>}/>
-        <Route path='/mens' element={<ShopCategory banner={men_banner} category="men"/>}/>
-        <Route path='/womens' element={<ShopCategory banner={women_banner} category="women"/>}/>
-        <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kid"/>}/>
+        <Route path='/Fast' element={<ShopCategory banner={one} category="fast"/>}/>
+        <Route path='/Ice' element={<ShopCategory banner={four} category="ice"/>}/>
+        <Route path='/Pastry' element={<ShopCategory banner={two} category="pastry"/>}/>
+        <Route path='/Drinks' element={<ShopCategory banner={three} category="drinks"/>}/>
+        {/* <Route path='/About' element={<ShopCategory banner={breadcrumb} category=""/>}/> */}
         <Route path='/product' element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>
 

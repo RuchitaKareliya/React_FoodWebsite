@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import footer_logo from '../Assets/logo_big.png'
+import footer_logo from '../Assets/logo_big.jpeg'
 import instagram_icon from '../Assets/instagram_icon.png'
 import pintester_icon from '../Assets/pintester_icon.png'
 import whatsapp_icon from '../Assets/whatsapp_icon.png'
@@ -9,7 +9,7 @@ const Footer =()=>{
         <div className='footer'>
             <div className="footer-logo">
                 <img src={footer_logo} alt=''/>
-                <p>SHOPPER</p>
+                <p>FOODER</p>
             </div>
             <ul className="footer-links">
                 <li>Company</li>
@@ -30,7 +30,7 @@ const Footer =()=>{
                     </div>
                 <div className="footer-copyright">
                     <hr/>
-                    <p>Copyright @ 2024 -All Right Reserved</p>
+                    <p>Vishwa vasoya & Vishwa trada & Ruchita kareliya</p>
                 </div>
             </div>
 

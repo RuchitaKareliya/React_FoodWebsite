@@ -8,7 +8,7 @@ const [productDetails,setProductDetails]=useState({
     name:"",
     new_price:"",
     old_price:"",
-    category:"women",
+    category:"ice",
     image:""
 })
 const imageHandler=(e)=>{
@@ -49,7 +49,7 @@ const Add_Product=async()=>{
             body:JSON.stringify(product),
 
         }).then((resp)=>resp.json()).then((data)=>{
-            data.success?alert("product Added"):alert("Failed")
+            data.success?alert("Food Added"):alert("Failed")
         })
     }
 }
@@ -57,7 +57,7 @@ const Add_Product=async()=>{
   return (
     <div className='add-product'>
         <div className="addproduct-itemfield">
-            <p>Product title</p>
+            <p>Food title</p>
             <input value={productDetails.name} onChange={changeHandler} type="text" name='name' placeholder='Type Here'/>
         </div>
         <div className="addproduct-price">
@@ -71,11 +71,12 @@ const Add_Product=async()=>{
             </div>
         </div>
         <div className="addproduct-itemfield">
-            <p>Product Category</p>
+            <p>Food Category</p>
             <select value={productDetails.category} onChange={changeHandler} name='category' className='add-product-selector'>
-                <option value="women">Women</option>
-                <option value="men">Men</option>
-                <option value="kid">Kid</option>
+                <option value="fast">Fast</option>
+                <option value="ice">Ice-Crime</option>
+                <option value="pastry">Pastry</option>
+                <option value="drinks">Drinkks</option>
             </select>
         </div>
         <div className="addproduct-itemfield">

@@ -13,12 +13,13 @@ app.use(express.json());
 app.use(cors());
 
 // database connection with mongodb
-mongoose.connect("mongodb+srv://vvasoya:em6AK1O7aDmX4qI0@cluster0.m2anco9.mongodb.net/e-commerce")
+mongoose.connect("mongodb://localhost:27017/Food")
 
 // API Creation
 
 app.get("/",(req,res) => {
     res.send("Express App is running")
+    
 
 })
 
@@ -206,16 +207,16 @@ app.post('/login',async (req,res) => {
 app.get('/newcollections',async (req,res)=>{
     let products=await Product.find({});
     let newcollection=products.slice(1).slice(-8);
-    console.log("newcollection fetched");
+    console.log("new food fetched");
     res.send(newcollection);
 
 })
 
 //creating endpoint for popular in women section
 app.get('/popularinwomen',async(req,res)=>{
-    let products=await Product.find({category:"women"});
+    let products=await Product.find({category:"fast"});
     let popular_in_women=products.slice(0,4);
-    console.log("popular in women fetched");
+    console.log("popular in Fast food fetched");
     res.send(popular_in_women);
 })
 //creating middelware to fetch user
